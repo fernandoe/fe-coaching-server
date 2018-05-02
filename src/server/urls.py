@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rest_framework import routers
+
+from fe_coaching.views import SessaoModelViewSet
+
+router = routers.SimpleRouter()
+router.register(r'sessoes', SessaoModelViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+urlpatterns += router.urls
