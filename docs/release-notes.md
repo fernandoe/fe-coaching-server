@@ -2,10 +2,11 @@
 
 ## 0.0.2-DEV
 
-- Adicionando badges do `travis-ci.org`, `requires.io` e `coveralls.io`
+- Add badges for `travis-ci.org`, `requires.io` e `coveralls.io`
+- Update Dockerfile FROM to: fernandoe/docker-python:3.6.5-alpine and update to the new format.
 
 
 
 ## 0.0.1
 
-- Base básica do projeto funcionando para a sua implementação
+- Bootstrap
