@@ -1,8 +1,8 @@
 from django.contrib import admin
 
-from .models import Sessao
+from .models import Session
 
 
-@admin.register(Sessao)
-class SessaoModelAdmin(admin.ModelAdmin):
-    list_display = ('get_uuid', 'usuario', 'entidade', 'numero', 'data', 'inicio', 'fim')
+@admin.register(Session)
+class SessionModelAdmin(admin.ModelAdmin):
+    list_display = ('get_uuid', 'user', 'entity', 'number', 'date', 'start', 'end')

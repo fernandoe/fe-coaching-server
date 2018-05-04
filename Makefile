@@ -10,5 +10,8 @@ build:
 test:
 	cd src; pytest -s
 
+makemigrations:
+	cd src; python manage.py makemigrations
+
 travis.test:
 	docker run --rm -it '${TRAVIS_REPO_SLUG}:${TAG}' pytest -s

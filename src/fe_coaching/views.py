@@ -1,9 +1,9 @@
 from rest_framework import viewsets
 
-from .models import Sessao
-from .serializers import SessaoModelSerializer
+from .models import Session
+from .serializers import SessionModelSerializer
 
 
-class SessaoModelViewSet(viewsets.ModelViewSet):
-    queryset = Sessao.objects.all()
-    serializer_class = SessaoModelSerializer
+class SessionModelViewSet(viewsets.ModelViewSet):
+    queryset = Session.objects.all()
+    serializer_class = SessionModelSerializer

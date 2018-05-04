@@ -5,11 +5,14 @@ from fe_core.models import UUIDModel, Entity
 User = get_user_model()
 
 
-class Sessao(UUIDModel):
-    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
-    entidade = models.ForeignKey(Entity, on_delete=models.CASCADE, null=True, blank=True)
-    numero = models.PositiveIntegerField(null=True)
-    data = models.DateField(null=True)
-    inicio = models.TimeField(null=True)
-    fim = models.TimeField(null=True)
-    conteudo = models.TextField(null=True)
+class Session(UUIDModel):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    entity = models.ForeignKey(Entity, on_delete=models.CASCADE, null=True, blank=True)
+    number = models.PositiveIntegerField(null=True)
+    date = models.DateField(null=True)
+    start = models.TimeField(null=True)
+    end = models.TimeField(null=True)
+    content = models.TextField(null=True)
+
+    def __str__(self):
+        return f"{self.user}#{self.number}"

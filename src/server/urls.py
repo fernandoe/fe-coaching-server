@@ -17,10 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
 
-from fe_coaching.views import SessaoModelViewSet
+from fe_coaching.views import SessionModelViewSet
 
 router = routers.SimpleRouter()
-router.register(r'sessoes', SessaoModelViewSet)
+router.register(r'sessions', SessionModelViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

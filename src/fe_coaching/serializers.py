@@ -1,9 +1,9 @@
 from rest_framework import serializers
 
-from .models import Sessao
+from .models import Session
 
 
-class SessaoModelSerializer(serializers.ModelSerializer):
+class SessionModelSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Sessao
-        fields = ('numero', 'data', 'inicio', 'fim')
+        model = Session
+        fields = ('number', 'date', 'start', 'end')
